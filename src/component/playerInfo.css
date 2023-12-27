@@ -1,0 +1,8 @@
+.player-info-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center; /* Align items vertically */
+    padding: 0;
+    margin: 0;
+  }
