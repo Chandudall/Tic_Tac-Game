@@ -1,0 +1,20 @@
+/* gameboard.css */
+
+.gameboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    top:-200px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  ol {
+    padding: 0;
+  }
+  
+ 

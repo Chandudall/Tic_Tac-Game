@@ -5,11 +5,13 @@ function Playerinfo({initialname,symbol}){
     const [isEditing,setisEditing]=useState(false);
     function HandleEdit(){
         setisEditing((editing)=>!editing);
+
     }
     function HandleChange(e){
         setPlayerName(e.target.value)
 
     }
+    
 
     let EditablePlayerName=<span className='player-name'>{Playername}</span>
     if(isEditing){
@@ -24,6 +26,7 @@ function Playerinfo({initialname,symbol}){
                     <span> {EditablePlayerName} </span>
                     <span className='symbol'>{ symbol}</span><span>    </span>
                     <button onClick={HandleEdit}>{isEditing ? 'save' : 'edit'}</button>
+        
                  </ul>
 
         </div>
