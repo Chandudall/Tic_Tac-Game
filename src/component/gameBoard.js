@@ -1,23 +1,43 @@
 import React,{useState} from 'react';
 import './gameboard.css';
-const gameBoard=[
+const initialgameBoard=[
     [null,null,null],
     [null,null,null],
     [null,null,null]
 ]
 
-function HandleGameBoard(){
+function GameBoard({onSelectPlayer,onActiveSquareBoard}){
+    const [gameBoard,setgameBoard]=useState(initialgameBoard);
+
+    const handleButtonClick=(rowIndex,colIndex)=>{
+        const updatedGameboard=[...gameBoard];
+        updatedGameboard[rowIndex][colIndex]=onActiveSquareBoard;
+        setgameBoard(updatedGameboard);
+        
+        onSelectPlayer();
+
+        
+       
+    }
+    
+   
     return(
         <div className='gameboard'>
-            {gameBoard.map((row,rowIndex)=><li key={rowIndex}>
-                <ol>{row.map((col,colIndex)=><li key={colIndex}>
-                    <button className='gameButton'>{col}</button>
-                </li>)}</ol>
-
-            </li>)}
-            
-
+      {gameBoard.map((row, rowIndex) => (
+        <div key={rowIndex} className='row'>
+          {row.map((col, colIndex) => (
+            <button
+              key={colIndex}
+              className='gameButton'
+              onClick={() => handleButtonClick(rowIndex, colIndex) }
+              disabled={col!==null}
+            >
+              {col}
+            </button>
+          ))}
         </div>
-    )
+      ))}
+    </div>
+  );
 }
-export default HandleGameBoard;
+export default GameBoard;

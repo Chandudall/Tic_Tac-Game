@@ -1,8 +1,35 @@
-.player-info-list {
-    list-style: none;
+.Player-info {
+    margin: 20px;
+  }
+  
+  .player-info-list {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
-    align-items: center; /* Align items vertically */
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+  .player-name {
+    margin-right: 10px;
+  }
+  
+  input {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .symbol {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
   }

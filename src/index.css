@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#player.highlight-player li.active{
+  border-color: #f6e35a;
+  animation: pulse 2s infinite ease-in-out;
+}
